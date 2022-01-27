@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "Geometry",
+        "repositoryURL": "git@github.com:RedECSEngine/Geometry.git",
+        "state": {
+          "branch": null,
+          "revision": "90141dd419e1b24816097030ebd4c1a88e70b0df",
+          "version": "0.0.2"
+        }
+      },
+      {
         "package": "JavaScriptKit",
         "repositoryURL": "https://github.com/swiftwasm/JavaScriptKit",
         "state": {
           "branch": null,
           "revision": "309e63c03d8116210ad0437f5d1f09a26d4de48b",
           "version": "0.11.1"
+        }
+      },
+      {
+        "package": "RedECS",
+        "repositoryURL": "git@github.com:RedECSEngine/RedECS.git",
+        "state": {
+          "branch": "updates-with-jsoncoder",
+          "revision": "0284485ca52d5361aabdc3c2fb54ba3c8a855941",
+          "version": null
         }
       }
     ]

@@ -8,15 +8,14 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "JavaScriptKit", url: "https://github.com/swiftwasm/JavaScriptKit", from: "0.11.1"),
+        .package(url: "git@github.com:RedECSEngine/Geometry.git", from: "0.0.2"),
         
         
-        .package(url: "git@github.com:RedECSEngine/Geometry.git", from: "0.0.1"),
-        .package(url: "git@github.com:RedECSEngine/Graphs.git", from: "0.0.1"),
-        .package(url: "git@github.com:RedECSEngine/RandomDungeonGenerator.git", from: "0.0.1"),
-//        .package(url: "git@github.com:RedECSEngine/RedECS.git", from: "0.0.1"),
+        /// Swap between these two packages to see issue
         
-        .package(name: "RedECS", path: "../RedECS"),
-//        .package(name: "RPTrunk", path: "../RPTrunk"),
+        .package(url: "git@github.com:RedECSEngine/RedECS.git", .branch("updates-with-jsoncoder")),
+//        .package(url: "git@github.com:RedECSEngine/RedECS.git", .branch("updates-without-jsoncoder")),
+
     ],
     targets: [
         .target(
@@ -24,14 +23,7 @@ let package = Package(
             dependencies: [
                 .product(name: "JavaScriptKit", package: "JavaScriptKit"),
                 .product(name: "Geometry", package: "Geometry"),
-                .product(name: "RandomDungeonGenerator", package: "RandomDungeonGenerator"),
-//                .product(name: "RPTrunk", package: "RPTrunk"),
-                .product(name: "Graphs", package: "Graphs"),
-                .product(name: "RedECS", package: "RedECS"),
-                .product(name: "RedECSBasicComponents", package: "RedECS"),
-            ],
-            resources: [
-                .copy("Resources")
+                .product(name: "RedECS", package: "RedECS")
             ]
         ),
         .testTarget(
